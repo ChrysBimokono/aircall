@@ -5,8 +5,52 @@ header {
   text-align: center;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
-
+.display{
+  display: flex;
+}
 header svg {
   display: block;
   width: 100%; height: 100%;
+}
+
+.logo{
+  width: 30%;
+  background-color: red;
+ border-radius: 0px 0px 50px 0px;
+  padding: 0.5rem 0rem;
+
+}
+
+.nav_container{
+ width: 100%;
+ margin: 0 0.5rem;
+ text-align: center;
+ background-color: aqua;
+ border-radius: 30px 0 0 0;
+  padding: 0.8rem 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.nav_container>div{
+
+}
+
+.nav_container>div:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: 2px solid red;
+}
+
+.dashed_line{
+  border-right: 1px dashed darkgray ;
+  padding: 0 1rem 0 0.5rem;
+}
+
+.text_align{
+  text-align: center;
+}
+.active{
+  color: #2b2929;
+  font-weight: 600;
 }
