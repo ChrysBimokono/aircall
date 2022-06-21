@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link, Switch, Route ,Routes} from 'react-route
 
 import GetData from './helpers/GetData.js';
 import CallData from './components/CallData.js';
+import CallLists from './components/CallLists.js';
 import Header from './Header.jsx';
 
 const App = () => {
@@ -13,7 +14,7 @@ const App = () => {
       <Header/>
       <div className="container-view"> 
       <Routes>  
-      <Route  path='/:callId' element={< CallData/>} />
+        <Route  path='/callList' element={< CallLists/>} />
       </Routes>
       </div>
     </div>

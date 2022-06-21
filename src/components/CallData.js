@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 
 
-const CallData= () =>{
+const CallData= (props) =>{
     const { callId }= useParams();
    console.log(callId);
     const { singleCall } = SpecificCallData(callId);
