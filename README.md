@@ -1,62 +1,160 @@
-## Summary
 
-The goal of this test is to make you code a small ReactJS app. We have prepared a skeleton app for you, but please change whatever you want (CSS files, HTML structure, JS structure, etc).
+This is a solution to a aircall application
 
-The app will have two different components:
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+
+
+## Overview
+
+### The challenge
+
+After completing the site, 
+users should be able to:
+
 - **Activity Feed** - simple list of calls
 - **Activity Detail** - detail of a call
 - **Archive** - the final user should be able to archive (and unarchive) a call. Archived calls will no longer be displayed on the Activity Feed and should have a separate Archived Tab.
 
-Show us what you can do in 24 hours. You will be assessed on the following parameters: 
-- Focus on design (Pay attention to the UI/UX and transitions)
-- Best React Practices
-- Code Readability and Maintainability
+### Screenshot
+I added a screenshot of my solution here.
 
-## Submission
-After you're done with the assignment, please submit a link to the **GitHub/Bitbucket repository** (make sure it's public) with your code **AND** a deployment link where our recruiters can interact with the live version. You can use freely available tools like **Netlify, Vercel, Heroku, etc** to deploy your React application.
-
-**Note:** Submissions without a valid repository and deployment link will be removed from any further consideration.
-
-To give you an idea, here's what our app looks like:
+![](./assets/mobileView.jpeg)
+![](./assets/moonPageView.jpeg)
 
 
-![app](https://user-images.githubusercontent.com/630714/29357034-763d7216-8276-11e7-8bcb-e77d9645dfcc.png)
+### Links
 
-## Installation
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-We're using [yarn](https://yarnpkg.com) here (but you can use npm):
+## My process
 
-```
-yarn install
-yarn start
-```
+### Built with
 
-## API documentation
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+-JavaScript
+- React.js
+- React-icons
+- React-routers
 
-### Routes
 
-Here is the API address: https://aircall-job.herokuapp.com.
+### What I learned
 
-As you can see, it's hosted on a free Heroku server, which means that the first time you will fetch the API, it will take few seconds to answer.
+I Used this section to recap over some of my major learnings while working through this project. Writing these out and providing code samples of areas i wanted to highlight.
 
-- **GET** - https://aircall-job.herokuapp.com/activities: get calls to display in the Activity Feed
-- **GET** - https://aircall-job.herokuapp.com/activities/:id: retrieve a specific call details
-- **POST** - https://aircall-job.herokuapp.com/activities/:id: update a call. The only field updatable is `is_archived (bool)`. You'll need to send a JSON in the request body:
-```
-{
-  is_archived: true
+Doing this project:
+
+* I learned to design a web application using React.js
+
+* I used intensively CSS FlexBox.
+* I Learned to use routers and react icons in my application
+
+
+
+
+```css
+/* for someone who is visually impaired */
+Made sure to implement this content for only screen readers to help users without vision.
+.sr-only{
+    position: absolute;
+    width:1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.contacts
+.settings
+.incoming_calls
+.footer_circle{
+    display: inline-block;
+    width: 20%;
+    background-color: red;
+ 
+}
+.incoming_calls>.icon{
+ 
+   width: 50px;
+   height:100px; 
+   color: #595858;
 }
 ```
-- **GET** - https://aircall-job.herokuapp.com/reset: Reset all calls to initial state (usefull if you archived all calls).
+```js
+function Navbar() {
 
-### Call object
+  let activeStyle= {
+    
+      color: '#2b2929',
+      fontweight: 600
+    
+  }
+  return (
+    <div className='nav_container'>
+      <NavLink 
+      to="incomingcalls"
+      style={({isActive})=>
+      isActive ? activeStyle:undefined
+      }>
+         <div className='hover dashed_line text_align'>Inbox</div>
+      </NavLink>
 
-- **id** - unique ID of call
-- **created_at** - creation date
-- **direction** - `inbound` or `outbound` call
-- **from** - caller's number
-- **to** - callee's number
-- **via** - Aircall number used for the call
-- **duration** - duration of a call (in seconds)
-- **is_archived** - call is archived or not
-- **call_type** - can be a `missed`, `answered` or `voicemail` call.
+      <NavLink to="allcalls" 
+      style={({isActive})=>
+      isActive ? activeStyle:undefined
+      }>
+         <div className='hover dashed_line text_align'>All calls</div>
+      </NavLink>
+     
+      <NavLink to="archived" 
+      style={({isActive})=>
+      isActive ? activeStyle:undefined
+      }>
+        <div className='hover'><VscSettings/> </div>
+      </NavLink>
+      
+    </div>
+  )
+}
+```
+
+### Continued development
+However, I need to focus on how to use lesser and clearer codes.
+I need to learn how to build the same application using Material Ui
+
+
+### Useful resources
+
+- [Example resource 1](https://www.youtube.com/kepowob) - This helped me learn how to better use CSS GRID. I really liked this pattern and will use it going forward.
+
+## Author
+
+- Website - [Chrys-Bimokono](https://chrysbim.com/index.html)
+
+- Twitter - [@EnockBim](https://twitter.com/home)
+
+
+## Acknowledgments
+I really give thanks to the frontend community for their support and encouragement.
+
+
+
