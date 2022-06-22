@@ -2,6 +2,11 @@
 import React from 'react';
 import SpecificCallData from '../helpers/SpecificCallData';
 
+import {VscCallOutgoing} from 'react-icons/vsc';
+import {VscCallIncoming} from 'react-icons/vsc';
+import {FcMissedCall} from 'react-icons/fc';
+
+import '../css/callitems.css';
 import {Link} from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 
@@ -23,14 +28,14 @@ const CallData= (props) =>{
           <div className="call_time1">
             {dateFormat(singleCall.created_at)}
             {singleCall.call_type === "missed" && (
-              <img src="https://img.icons8.com/fluency/48/000000/missed-call.png" />
+              <FcMissedCall/>
             )}
             {singleCall.call_type === "answered" &&
               singleCall.direction === "inbound" && (
-                <img src="https://img.icons8.com/color/48/000000/incoming-call--v1.png" />
+                <VscCallIncoming/>
               )}
             {singleCall.direction === "outbound" && (
-              <img src="https://img.icons8.com/color/48/000000/outgoing-call.png" />
+              < VscCallOutgoing />
             )}
           </div>
           <div>

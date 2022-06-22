@@ -1,0 +1,54 @@
+.contacts
+.settings
+.incoming_calls
+.footer_circle{
+    display: inline-block;
+    width: 20%;
+    background-color: red;
+ 
+}
+.incoming_calls>.icon{
+ 
+   width: 50px;
+   height:100px; 
+   color: #595858;
+}
+.contacts >.icon{
+    width: 50px;
+    height:100px; 
+    color: #595858;
+}
+
+.settings > .icon{
+    width: 50px;
+    height:100px; 
+    color: #595858;
+}
+
+.footer_circle > .icon{
+    width: 50px;
+    height:100px; 
+    color: #595858;
+}
+.menu{
+    display: inline-block;
+    border: 1px solid #333333;
+    padding: 1rem 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+}
+
+.inner_circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2ac41f;
+    color: white;
+}
+
+.hover:hover{
+    border-bottom: 2px solid #2ac41f;
+  }
+

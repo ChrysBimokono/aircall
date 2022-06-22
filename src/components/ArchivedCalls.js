@@ -3,9 +3,9 @@ import GetData from "../helpers/GetData";
 import ListOfCalls from "./ListOfCalls";
 
 const ArchivedCalls = () => {
-  const { CallData } = GetData();
+  const { getCallData } = GetData();
 
-  const archived = CallData.filter(
+  const archived = getCallData.filter(
     (archive) => archive.is_archived === true
   );
   const archivedItems = archived.map((data) => (

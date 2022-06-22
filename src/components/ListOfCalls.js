@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 
-import moment from "moment";
+import moment from 'moment';
 import { Link, useParams } from "react-router-dom";
 import CallData from "./CallData";
+import {VscCallOutgoing} from 'react-icons/vsc';
+import {VscCallIncoming} from 'react-icons/vsc';
+import '../css/callitems.css';
+
 
 const ListOfCalls = (props) => {
   const { id } = useParams();
@@ -36,25 +40,25 @@ const ListOfCalls = (props) => {
           eachCall(data.id);
         }}
       >
-        <div className="call_session">
+        <div className="call_container">
           <div className="call_time">{dateFormat(data.created_at)}</div>
-          <div className="call_inner">
-            <div className="call_dir">
+          <div className="call_content">
+            <div className="call_direction">
               <p>
                 {(data.direction === "outbound" && (
-                  <img src="https://img.icons8.com/color/48/000000/outgoing-call.png" />
+                  <VscCallOutgoing/>
                 )) ||
                   (data.direction === "inbound" && (
-                    <img src="https://img.icons8.com/color/48/000000/incoming-call--v1.png" />
+                    <VscCallIncoming/>
                   ))}
               </p>
             </div>
-            <div className="call_det">
+            <div className="caller">
               <h4>{data.from}</h4>
               <p>called in {data.via}</p>
               {/* {<CallDetail />} */}
             </div>
-            <div className="call_dur">
+            <div className="caller_duration">
               <p>{moment(data.created_at).format("LT")}</p>
             </div>
           </div>

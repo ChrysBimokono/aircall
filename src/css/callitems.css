@@ -1,0 +1,34 @@
+.call_container {
+    background:ghostwhite;
+    border-top: 1px dashed #d6d2d2;
+    padding: 1rem 0.8rem;
+    position: relative;
+    text-decoration: none;
+  }
+
+.call_time{
+    text-align: center;
+}
+
+.call_content {
+    display: flex;
+    gap: 1rem;
+    background-color: white;
+    border: 1px solid #d6d2d2;
+    border-radius: 0.8rem;
+    padding: 1rem 0.5rem 1rem;
+}
+  .calldetails{
+      background-color: red;
+  }
+
+  .caller{
+      width: 60%;
+  }
+  .caller>p{
+      color: #333333;
+  }
+
+  .caller_duration >p{
+    color: #595858;
+  }

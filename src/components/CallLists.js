@@ -4,8 +4,7 @@ import axios from "axios";
 // import { useEffect } from 'react';
 import GetData from "../helpers/GetData";
 import ListOfCalls from "./ListOfCalls";
-import IncomingCalls from "./IncomingCalls";
-import ArchivedCalls from "./archivedCalls";
+
 
 const CallLists = () => {
   const { getCallData, getArchivedData, makeAllCallsArchived } =
@@ -27,7 +26,7 @@ const CallLists = () => {
   return (
     <div>
       {/* <button type="submit" onClick={handleSubmit}>Archive all Calls</button> */}
-
+     
       {renderCalls}
     </div>
   );
