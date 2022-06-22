@@ -33,9 +33,7 @@ header svg {
   gap: 1rem;
   justify-content: flex-end;
 }
-.nav_container>div{
 
-}
 
 .nav_container>div:hover {
   cursor: pointer;
