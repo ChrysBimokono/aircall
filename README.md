@@ -28,16 +28,10 @@ users should be able to:
 - **Activity Detail** - detail of a call
 - **Archive** - the final user should be able to archive (and unarchive) a call. Archived calls will no longer be displayed on the Activity Feed and should have a separate Archived Tab.
 
-### Screenshot
-I added a screenshot of my solution here.
-
-![](./assets/mobileView.jpeg)
-![](./assets/moonPageView.jpeg)
-
 
 ### Deployment Link
 
-- Solution Live-Site URL: [Add solution URL here](https://getacall.netlify.app/)
+- Solution Live-Site URL: [(https://getacall.netlify.app/)](https://getacall.netlify.app/)
 
 
 ## My process
